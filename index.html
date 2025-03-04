@@ -13,84 +13,28 @@
 
     <section id="promocoes">
         <h2>Combos Promocionais de Italiano</h2>
-        <div class="promocoes_container">
-            <div class="promo">
-                <p>2 Italianos - <strong>R$ 25,00</strong></p>
-                <button class="pedido" data-item="2 Italianos">Pedir</button>
-            </div>
-            <div class="promo">
-                <p>2 Italianos + Refri - <strong>R$ 25,00</strong></p>
-                <button class="pedido" data-item="2 Italianos + Refri">Pedir</button>
-            </div>
-            <div class="promo">
-                <p>Combo do seu Zé - <strong>R$ 25,00</strong></p>
-                <button class="pedido" data-item="Combo do seu Zé">Pedir</button>
-            </div>
-            <div class="promo">
-                <p>Combo Italiano - <strong>R$ 25,00</strong></p>
-                <button class="pedido" data-item="Combo Italiano">Pedir</button>
-            </div>
-        </div>
+        <div class="container" id="promocoes-container"></div>
     </section>
-
+    
     <section id="classicos">
         <h2>Italianos Clássicos</h2>
-        <div class="classicos_container">
-            <div class="item">
-                <p>Italiano de Queijo e Presunto - <strong>R$ 10,50</strong></p>
-                <button class="pedido" data-item="Italiano de Queijo e Presunto">Pedir</button>
-            </div>
-            <div class="item">
-                <p>Italiano de Queijo, Presunto c/ Cebola - <strong>R$ 10,50</strong></p>
-                <button class="pedido" data-item="Italiano de Queijo, Presunto c/ Cebola">Pedir</button>
-            </div>
-            <div class="item">
-                <p>Italiano de Cababresa - <strong>R$ 11,50</strong></p>
-                <button class="pedido" data-item="Italiano de Cababresa">Pedir</button>
-            </div>
-            <div class="item">
-                <p>Italiano de Cababresa c/ Cebola - <strong>R$ 11,50</strong></p>
-                <button class="pedido" data-item="Italiano de Cababresa c/ Cebola">Pedir</button>
-            </div>
-            <div class="item">
-                <p>Italiano Napolitano - <strong>R$ 11,50</strong></p>
-                <button class="pedido" data-item="Italiano Napolitano">Pedir</button>
-            </div>
-            <div class="item">
-                <p>Italiano Napolitano c/ Cebola - <strong>R$ 11,50</strong></p>
-                <button class="pedido" data-item="Italiano Napolitano c/ Cebola">Pedir</button>
-            </div>
-        </div>
+        <div class="container" id="classicos-container"></div>
     </section>
-
+    
     <section id="gourmet">
         <h2>Italianos Gourmet</h2>
-        <div class="gourmet_container">
-            <div class="item">
-                <p>Italiano de Costela - <strong>R$ 15,50</strong></p>
-                <button class="pedido" data-item="Italiano de Costela">Pedir</button>
-            </div>
-            <div class="item">
-                <p>Italiano de Carne Seca - <strong>R$ 15,50</strong></p>
-                <button class="pedido" data-item="Italiano de Carne Seca">Pedir</button>
-            </div>
-            <div class="item">
-                <p>Italiano de Quatro Queijos - <strong>R$ 12,50</strong></p>
-                <button class="pedido" data-item="Italiano de Quatro Queijos">Pedir</button>
-            </div>
-            <div class="item">
-                <p>Italiano de Bacon c/ Ovos - <strong>R$ 11,50</strong></p>
-                <button class="pedido" data-item="Italiano de Bacon c/ Ovos">Pedir</button>
-            </div>
-            <div class="item">
-                <p>Italiano Frango c/ Cream Cheese - <strong>R$ 12,50</strong></p>
-                <button class="pedido" data-item="Italiano Frango c/ Cream Cheese">Pedir</button>
-            </div>
-            <div class="item item_invisivel">
-                <p>Italiano Frango c/ Cream Cheese - <strong>R$ 15,00</strong></p>
-                <button class="pedido" data-item="item_invisivel">Pedir</button>
-            </div>
+        <div class="container" id="gourmet-container"></div>
     </section>
+    
+    <section id="carrinho">
+        <h2><span class="emoji-carrinho">🛒</span>Meu Carrinho</h2>
+        <div id="carrinho-container">
+            <p>Seu carrinho está vazio.</p>
+        </div>
+        <p id="total"><strong>Total: R$ 0,00</strong></p>
+        <button id="finalizar-pedido" disabled>Finalizar Pedido</button>
+    </section>
+
 
     <footer>
         <p>&copy; 2025 - Desenvolvido por Diego Vieira</p>
