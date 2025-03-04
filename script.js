@@ -106,7 +106,7 @@ function ativarBotoesRemover() {
 document.getElementById("finalizar-pedido").addEventListener("click", function() {
     if (carrinho.length === 0) return;
 
-    let numeroWhatsApp = "5511999999999"; // Substituir pelo número real
+    let numeroWhatsApp = "5521966207951"; // Substituir pelo número real
     let mensagem = "Olá, quero fazer um pedido:\n\n";
     
     carrinho.forEach(item => {
