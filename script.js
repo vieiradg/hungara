@@ -41,17 +41,23 @@ function criarListaItens(lista, containerId) {
         container.appendChild(div);
     });
 
+    // Chama a ativação dos botões aqui, após a criação dos itens.
     ativarBotoesAdicionar();
 }
 
 function ativarBotoesAdicionar() {
+    // Aqui, ao invés de adicionar o evento em todos os botões de forma geral,
+    // vamos garantir que o evento seja apenas associado uma vez.
     document.querySelectorAll(".adicionar").forEach(botao => {
-        botao.addEventListener("click", function() {
-            let nome = this.getAttribute("data-nome");
-            let preco = parseFloat(this.getAttribute("data-preco"));
-            adicionarAoCarrinho(nome, preco);
-        });
+        botao.removeEventListener("click", handleAdicionarClick); // Remove qualquer ouvinte anterior
+        botao.addEventListener("click", handleAdicionarClick); // Adiciona o ouvinte de forma única
     });
+}
+
+function handleAdicionarClick() {
+    let nome = this.getAttribute("data-nome");
+    let preco = parseFloat(this.getAttribute("data-preco"));
+    adicionarAoCarrinho(nome, preco);
 }
 
 function adicionarAoCarrinho(nome, preco) {
@@ -97,7 +103,7 @@ function ativarBotoesRemover() {
     document.querySelectorAll(".remover").forEach(botao => {
         botao.addEventListener("click", function() {
             let index = this.getAttribute("data-index");
-            carrinho.splice(index, 1); // Remove item usando o índice
+            carrinho.splice(index, 1); 
             atualizarCarrinho();
         });
     });
@@ -106,7 +112,7 @@ function ativarBotoesRemover() {
 document.getElementById("finalizar-pedido").addEventListener("click", function() {
     if (carrinho.length === 0) return;
 
-    let numeroWhatsApp = "5521966207951"; // Substituir pelo número real
+    let numeroWhatsApp = "5521966207951"; 
     let mensagem = "Olá, quero fazer um pedido:\n\n";
     
     carrinho.forEach(item => {
